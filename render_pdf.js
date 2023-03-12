@@ -7,7 +7,7 @@ const getScreenshot = async () => {
   await page.emulateMediaType('screen');
   await page.waitForTimeout(4000)
   await page.pdf( {
-    path: 'cv.pdf',
+    path: process.env.CV_PDF_PATH || 'cv.pdf',
     scale: 1,
     printBackground: true,
     width: 1240,
