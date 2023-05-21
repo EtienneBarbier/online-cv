@@ -6,8 +6,9 @@ sidebar:
   about: True # set to False or comment line if you want to remove the "how to use?" in the sidebar
   education: True # set to False if you want education in main section instead of in sidebar
   skills: True # set to False if you want skills in main section instead of in sidebar
-  oss: False # set to True if you want oss-contribution in sidebar section instead of in main
+  oss: True # set to True if you want oss-contribution in sidebar section instead of in main
   personal-projects: False # set to True if you want personal projects in sidebar section instead of in main
+  certifications: True # set to True if you want certifications in sidebar section instead of in main
 
   # Profile information
   name: Alan Doe
@@ -175,6 +176,16 @@ projects:
       link: "#"
       details: >
         A responsive Bootstrap one page theme designed to help app developers promote their mobile apps
+
+
+certifications:
+  title: Certifications
+  intro:
+  assignments:
+    - title: PSM1
+      time: 2022
+      link: "#hook"
+      tagline: "Professional Scrum Master 1"
 
 personal-projects:
   title: Personal Projects

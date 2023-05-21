@@ -1,0 +1,81 @@
+{% assign certs = site.data.data.certifications %}
+{% if certs %}
+  {% if site.data.data.sidebar.certifications %}
+  <div class="certs-container container-block">
+
+    <h2 class="container-block-title">
+      {{ certs.title }}
+    </h2>
+
+    {% if certs.intro %}
+    <div class="intro">
+      <p>{{ certs.intro }}</p>
+    </div>
+    <!--//intro-->
+    {% endif %}
+
+    {% for assignment in certs.assignments %}
+    <div class="item">
+      {% if assignment.link %}
+      <h4 class="project-title"><a href="{{ assignment.link }}" target="_blank">{{ assignment.title }}</a></h4>
+      {% else %}
+      <h4 class="project-title">{{ assignment.title }}</h4>
+      {% endif %}
+      {% if assignment.time %}
+      <div class="project-time">{{ assignment.time }}</div>
+      {% endif %}
+      {% if assignment.tagline %}
+      <span class="project-tagline">{{ assignment.tagline }}</span>
+      {% endif %}
+    </div><!--//item-->
+    {% endfor %}
+
+  </div><!--//education-container-->
+  {% else %}
+  <section class="section projects-section">
+    <h2 class="section-title">
+      <span class="fa-stack fa-xs">
+        <i class="fas fa-circle fa-stack-2x"></i>
+        <i class="fas fa-box-open fa-stack-1x fa-inverse"></i>
+      </span>
+      {{ certs.title }}
+    </h2>
+
+    {% if certs.intro %}
+    <div class="intro">
+      <p>{{ certs.intro }}</p>
+    </div>
+    <!--//intro-->
+    {% endif %}
+
+    {% for assignment in certs.assignments %}
+    <div class="item">
+
+      <div class="meta">
+        <div class="upper-row">
+          {% if assignment.link %}
+          <h3 class="project-title"><a href="{{ assignment.link }}" target="_blank">{{ assignment.title }}</a></h3>
+          {% else %}
+          <h3 class="project-title">{{ assignment.title }}</h3>
+          {% endif %}
+          {% if assignment.time %}
+          <div class="time">{{ assignment.time }}</div>
+          {% endif %}
+        </div><!--//upper-row-->
+
+
+      </div><!--//meta-->
+      {% if assignment.tagline %}
+      <span class="project-tagline">{{ assignment.tagline }}</span>
+      {% endif %}
+
+    </div><!--//item-->
+
+
+    <!--//item-->
+    {% endfor %}
+
+  </section>
+  <!--//section-->
+  {% endif %}
+{% endif %}
