@@ -14,6 +14,10 @@ permalink: /print
 
 {% include projects.html %}
 
+{% unless site.data.data.sidebar.certifications %}
+  {% include certifications.html %}
+{% endunless %}
+
 {% unless site.data.data.sidebar.oss %}
   {% include oss-contributions.html %}
 {% endunless %}
