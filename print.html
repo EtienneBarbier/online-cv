@@ -6,17 +6,19 @@ permalink: /print
 
 {% include career-profile.html %}
 
-{% unless site.data.data.sidebar.education %}
-  {% include education.html %}
-{% endunless %}
-
 {% include experiences.html %}
 
 {% include projects.html %}
 
+{% unless site.data.data.sidebar.education %}
+  {% include education.html %}
+{% endunless %}
+
 {% unless site.data.data.sidebar.certifications %}
   {% include certifications.html %}
 {% endunless %}
+
+{% include publications.html %}
 
 {% unless site.data.data.sidebar.oss %}
   {% include oss-contributions.html %}
@@ -25,8 +27,6 @@ permalink: /print
 {% unless site.data.data.sidebar.personal-projects %}
   {% include personal-projects.html %}
 {% endunless %}
-
-{% include publications.html %}
 
 {% unless site.data.data.sidebar.skills %}
   {% include skills.html %}
